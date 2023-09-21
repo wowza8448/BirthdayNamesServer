@@ -30,6 +30,6 @@ h1{
 img{
 	z-index: 2;
 	position: fixed;
-	max-width: 20%;
+	max-width: 100%;
 	
 }

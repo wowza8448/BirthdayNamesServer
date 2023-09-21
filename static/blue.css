@@ -9,9 +9,9 @@
 
 
 h1{
-	color: #000063;
+	color: blue;
 	position: relative;
-	font-size: 100px;
+	font-size: 150px;
 	z-index: 3;
 	text-align: center;
 	top: 45%;
@@ -20,8 +20,8 @@ h1{
 
 .innertext{
 	position: relative;
-	font-size: 150px;
-	color: #000063;
+	font-size: 200px;
+	color: Blue;
 	text-align: center;
 	top: 40%;
 	z-index: 3;
@@ -30,6 +30,6 @@ h1{
 img{
 	z-index: 2;
 	position: fixed;
-	max-width: 20%;
+	max-width: 100%;
 	
 }

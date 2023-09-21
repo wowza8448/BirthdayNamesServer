@@ -1,13 +1,9 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename='blue.css') }}">
-    </head>
-    <body>
-        <!-- <img src="bg.png"> -->
-        <h1>{{ greeting }}</h1>
-        <div class="innertext">{{ name }}</div>
-        <video autoplay muted loop id="myVideo">
-            <source src="{{ url_for('static', filename='fireworks.mp4') }}" type="video/mp4">
-        </video>
-    </body>
-</html>
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div id="full_page">
+        <img src="{{ url_for('static', filename='logo.png') }}">
+    </div>
+</body>

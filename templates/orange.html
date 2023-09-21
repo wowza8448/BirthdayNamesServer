@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='orange.css') }}">
     </head>
     <body>
-        <!-- <img src="bg.png"> -->
+        <img src="{{ url_for('static', filename='bg.png') }}">
         <h1>{{ greeting }}</h1>
         <div class="innertext">{{ name }}</div>
         <video autoplay muted loop id="myVideo">

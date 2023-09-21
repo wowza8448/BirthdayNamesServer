@@ -18,24 +18,32 @@ def create_room():
 @app.route("/BlueRoom", methods = ['GET', 'POST'])
 def br():
     getName = all_rooms['Blue']['name']
+    if getName == 'Name' or getName == '':
+        return render_template('index.html')
     getGreeting = all_rooms['Blue']['greeting']
-    return render_template('index.html', name=getName, greeting=getGreeting)
+    return render_template('blue.html', name=getName, greeting=getGreeting)
 
 @app.route("/RedRoom", methods = ['GET', 'POST'])
 def rr():
     getName = all_rooms['Red']['name']
+    if getName == 'Name' or getName == '':
+        return render_template('index.html')
     getGreeting = all_rooms['Red']['greeting']
     return render_template('red.html', name=getName, greeting=getGreeting)
 
 @app.route("/YellowRoom", methods = ['GET', 'POST'])
 def yr():
     getName = all_rooms['Yellow']['name']
+    if getName == 'Name' or getName == '':
+        return render_template('index.html')
     getGreeting = all_rooms['Yellow']['greeting']
     return render_template('yellow.html', name=getName, greeting=getGreeting)
 
 @app.route("/OrangeRoom", methods = ['GET', 'POST'])
 def orange_r():
     getName = all_rooms['Orange']['name']
+    if getName == 'Name' or getName == '':
+        return render_template('index.html')
     getGreeting = all_rooms['Orange']['greeting']
     return render_template('orange.html', name=getName, greeting=getGreeting)
 
