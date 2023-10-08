@@ -1,9 +1,43 @@
-<!DOCTYPE html>
+<html>
+
 <head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename=css) }}">
 </head>
+
 <body>
-    <div id="full_page">
-        <img src="{{ url_for('static', filename='logo.png') }}">
-    </div>
+    <img src="{{ url_for('static', filename='bg.png') }}">
+    <h1 id="greeting">{{ greeting }}</h1>
+    <div id="name" class="innertext">{{ name }}</div>
+    <video autoplay muted loop id="myVideo">
+        <source id="video" src="{{ url_for('static', filename=background) }}" type="video/mp4">
+    </video>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        var data;
+        var newData;
+        var getFrom = `/Get{{color}}`
+        var videoSrc = document.getElementById("video").src
+        function party_info() {
+            $.ajax({
+                type: "GET",
+                url: getFrom,
+                data: data,
+                success: function (data) {
+                    newData = JSON.parse(data);
+                    console.log(newData.background);
+                    if (newData.name && newData.greeting) {
+                        document.getElementById("name").innerText = newData.name;
+                        document.getElementById("greeting").innerText = newData.greeting;
+                        if (!'{{background}}'.includes(newData.background)){
+                            location.reload();
+                        }
+                    }
+                }
+            });
+            setTimeout(party_info, 1000);
+        }
+        party_info();
+    </script>
 </body>
+
+</html>
