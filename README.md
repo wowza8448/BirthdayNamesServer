@@ -6,6 +6,9 @@ The url extension for each page is:
 - /OrangeRoom
 - /YellowRoom
 
+The page will auto refresh every second to fetch new changes that come from the main page at '/' This includes updating the CSS and background video
+
+
 Requires Flask
 - pip install Flask
 
