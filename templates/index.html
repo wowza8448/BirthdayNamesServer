@@ -24,7 +24,6 @@
                 data: data,
                 success: function (data) {
                     newData = JSON.parse(data);
-                    console.log(newData.background);
                     if (newData.name && newData.greeting) {
                         document.getElementById("name").innerText = newData.name;
                         document.getElementById("greeting").innerText = newData.greeting;

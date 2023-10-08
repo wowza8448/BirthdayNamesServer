@@ -19,7 +19,6 @@ def create_room():
             color = request.form.get("color")
             name = request.form.get("name")
             background = request.form.get("background")
-            print(background)
             all_rooms[color]["greeting"] = greeting
             all_rooms[color]["name"] = name
             all_rooms[color]["background"] = background
